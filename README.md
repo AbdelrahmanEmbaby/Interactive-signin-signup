@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=435&lines=Interactive+sign+in/up+page.;Hosted+by+Rive" alt="Typing SVG" width="50%"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=435&lines=Interactive+sign+in/up+page.;Hosted+by+Rive" alt="Typing SVG" width="600px"/>
 <img height="20px"/>
 </div>
 
@@ -11,7 +11,7 @@
 
 <div align="center">
 
-## [Abdelrahman Embaby](https://github.com/AbdelrahmanEmbaby)
+### [Abdelrahman Embaby](https://github.com/AbdelrahmanEmbaby)
 
 </div>
 
