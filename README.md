@@ -18,7 +18,7 @@
 <img height="20px"/>
 
 <div align="center">
-<img src="./2023-07-01_20-56-30.gif" width="70%"/>
+<img src="./2023-07-01_20-56-30.gif" width="90%"/>
 </div>
 
 <img height="20px"/>
