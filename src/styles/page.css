@@ -1,0 +1,216 @@
+:root {
+    --blur: 2rem;
+    --background-color: #fff;
+    --surface-color: #a4c4b5;
+    --primary-color: #3d3d3d;
+    --secondary-color: #989897;
+    --onsurface-color: #f6f8f6;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backdrop-filter: blur(var(--blur));
+    backdrop-filter: blur(var(--blur));
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    width: 55rem;
+    height: 40rem;
+    z-index: 100;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: var(--surface-color);
+    padding: 2rem;
+    z-index: 1000;
+    transform: all 400ms linear;
+}
+
+.animation-container {
+    position: relative;
+    align-self: flex-start;
+    width: 23rem;
+    display: flex;
+    justify-content: center;
+    transition: all 3000ms linear;
+}
+
+.slider .title {
+    text-align: center;
+    color: var(--onsurface-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.slider .text {
+    text-align: center;
+    color: var(--onsurface-color);
+    width: 25rem;
+}
+
+.slide-right {
+    animation: slide-right 3000ms forwards;
+}
+
+.slide-left {
+    animation: slide-left 3000ms forwards;
+}
+
+.ani-right {
+    animation: ani-right 3000ms forwards;
+}
+
+.ani-left {
+    animation: ani-left 3000ms forwards;
+}
+
+/* @keyframes enlarge {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes diminish {
+    0% {
+        width: 100%;
+        left: 50%;
+    }
+
+    100% {
+        width: 50%;
+        left: 50%;
+    }
+} */
+
+@keyframes slide-right {
+    0% {
+        width: 50%;
+    }
+
+    30% {
+        width: 100%;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    70% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 50%;
+        left: 50%;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        width: 50%;
+        left: 50%;
+    }
+
+    30% {
+        width: 100%;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    70% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 50%;
+        left: 0;
+    }
+}
+
+@keyframes ani-right {
+    0% {
+        left: 0;
+    }
+
+    70% {
+        left: 50%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes ani-left {
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 50%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+
+
+/* @keyframes diminish {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes shift-right {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 50%;
+    }
+}
+
+@keyframes shift-left {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: 0;
+    }
+} */

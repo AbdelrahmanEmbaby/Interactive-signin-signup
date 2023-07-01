@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 16px;
+}
+
+.app-container {
+    height: 100vh;
+    background-size: cover;
+    background-image: url("../assets/images/ricardo-gomez-angel-RjBXz3rtdLw-unsplash.jpg");
+    position: relative;
+}

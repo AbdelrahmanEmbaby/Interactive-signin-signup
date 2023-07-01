@@ -1,0 +1,126 @@
+.signin-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2.8rem;
+    padding: 4rem;
+}
+
+.lovebirds-title {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+    color: var(--primary-color);
+}
+
+.lovebirds-welcome {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+}
+
+.signin-form .fields-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.8rem;
+}
+
+.signin-form .submit-btn {
+    width: 8rem;
+    height: 2rem;
+    background-color: var(--secondary-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--background-color);
+    border: none;
+    border-radius: 3rem;
+    transition: background-color 100ms linear;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.signin-form .submit-btn:active {
+    background-color: var(--primary-color);
+}
+
+.signin-form .forgot-btn {
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: var(--surface-color);
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.signin-form .forgot-btn:active {
+    text-decoration: none;
+}
+
+.signin-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+.or-section {
+    width: min-content;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.or-section::after,
+.or-section::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 4rem;
+    height: 0.05rem;
+    background-color: var(--secondary-color);
+}
+
+.or-section::after {
+    right: 150%;
+}
+
+.or-section::before {
+    left: 150%;
+}
+
+.new-container {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.new-container .new-text{
+    font-size: 0.85rem;
+    color: var(--primary-color);
+}
+
+.new-container .create-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 0.85rem;
+    color: var(--surface-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.new-container .create-btn:active{
+    text-decoration: none;
+}

@@ -1,0 +1,75 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input-container .placeholder {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 0.9em;
+    color: var(--primary-color);
+    transition: all 200ms ease-out;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+
+.input-container .lift {
+    position: absolute;
+    top: -20%;
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+.input-container .input {
+    width: 17rem;
+    border: none;
+    outline: none;
+    border-bottom: 0.05rem solid var(--primary-color);
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+    transition: all 200ms ease-out;
+}
+
+.input-container .thicken {
+    border-bottom: 0.06rem solid var(--secondary-color);
+}
+
+.input-container .input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 10rem var(--background-color) inset !important;
+}
+
+.eye-btn {
+    position: absolute;
+    width: 1.3rem;
+    height: 0.9rem;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: 0;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+}
+
+.dim {
+    color: var(--secondary-color);
+}
+
+.google-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.google-btn img {
+    width: 2rem;
+    margin-right: 0.5rem;
+}
