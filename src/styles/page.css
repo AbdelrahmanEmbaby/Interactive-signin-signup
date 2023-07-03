@@ -1,12 +1,3 @@
-:root {
-    --blur: 2rem;
-    --background-color: #fff;
-    --surface-color: #a4c4b5;
-    --primary-color: #3d3d3d;
-    --secondary-color: #989897;
-    --onsurface-color: #f6f8f6;
-}
-
 .page-container {
     display: flex;
     justify-content: center;
@@ -24,32 +15,45 @@
     background-color: var(--background-color);
     width: 55rem;
     height: 40rem;
+    border-radius: 0.3rem;
     z-index: 100;
     position: relative;
+    overflow: hidden;
 }
 
 .slider {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     row-gap: 1rem;
     position: absolute;
     width: 50%;
     height: 100%;
     background-color: var(--surface-color);
-    padding: 2rem;
     z-index: 1000;
     transform: all 400ms linear;
+    padding: 4rem;
+}
+
+.one-piece {
+    position: absolute;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+    background-color: transparent;
+    width: 55rem;
+    padding: 0 1rem 0 4rem;
+    z-index: 10000;
 }
 
 .animation-container {
     position: relative;
     align-self: flex-start;
-    width: 23rem;
     display: flex;
-    justify-content: center;
     transition: all 3000ms linear;
+    background-color: transparent;
+    width: min-content;
 }
 
 .slider .title {
@@ -80,28 +84,6 @@
 .ani-left {
     animation: ani-left 3000ms forwards;
 }
-
-/* @keyframes enlarge {
-    0% {
-        width: 50%;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes diminish {
-    0% {
-        width: 100%;
-        left: 50%;
-    }
-
-    100% {
-        width: 50%;
-        left: 50%;
-    }
-} */
 
 @keyframes slide-right {
     0% {
@@ -151,7 +133,7 @@
 
     100% {
         width: 50%;
-        left: 0;
+        left: 0%;
     }
 }
 
@@ -160,22 +142,14 @@
         left: 0;
     }
 
-    70% {
-        left: 50%;
-    }
-
     100% {
-        left: 0%;
+        left: 55%;
     }
 }
 
 @keyframes ani-left {
     0% {
-        left: 0;
-    }
-
-    20% {
-        left: 50%;
+        left: 55%;
     }
 
     100% {
@@ -183,34 +157,124 @@
     }
 }
 
+.mobile-slider {
+    display: none;
+}
 
+@media only screen and (max-width: 685px) {
+    .card-container {
+        width: 25rem;
+        border-radius: 1rem;
+        flex-direction: column-reverse;
+        overflow-y: hidden;
+    }
 
-/* @keyframes diminish {
-    0% {
+    .one-piece {
+        display: none;
+    }
+
+    .slider {
+        display: none;
+    }
+
+    .mobile-slider {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        row-gap: 1rem;
+        position: absolute;
+        top: -100%;
         width: 100%;
+        height: 100%;
+        background-color: var(--surface-color);
+        z-index: 1000;
+        transform: all 400ms linear;
+        padding: 4rem;
     }
 
-    100% {
-        width: 50%;
+    .mobile-slider .title {
+        text-align: center;
+        color: var(--onsurface-color);
+        font-size: 1.2rem;
+        font-weight: 500;
     }
+
+    .mobile-slider .text {
+        text-align: center;
+        color: var(--onsurface-color);
+        width: 25rem;
+    }
+
+    .slide-top {
+        animation: slide-top 3000ms forwards;
+    }
+
+    .slide-bottom {
+        animation: slide-bottom 3000ms forwards;
+    }
+
+    .signup-container,
+    .signin-container {
+        position: absolute;
+        width: 100% !important;
+        background-color: var(--background-color) !important;
+    }
+
+    .card-container:has(.slide-top) .signup-container {
+        animation: vanish 3000ms forwards;
+    }
+
+    .card-container:has(.slide-bottom) .signin-container {
+        animation: vanish 3000ms forwards;
+    }
+
+    .card-container:has(.slide-top) .signin-container {
+        animation: appear 3000ms forwards;
+    }
+
+    .card-container:has(.slide-bottom) .signup-container {
+        animation: appear 3000ms forwards;
+    }
+
+    @keyframes slide-top {
+        0% {
+            top: 100%;
+        }
+
+        100% {
+            top: -100%;
+        }
+    }
+
+    @keyframes slide-bottom {
+        0% {
+            top: -100%;
+        }
+
+        100% {
+            top: 100%;
+        }
+    }
+
+    @keyframes vanish {
+        0% {
+            z-index: 200;
+        }
+
+        100% {
+            z-index: 100;
+        }
+    }
+
+    @keyframes appear {
+        0% {
+            z-index: 100;
+        }
+
+        100% {
+            z-index: 200;
+        }
+    }
+
 }
-
-@keyframes shift-right {
-    0% {
-        left: 0;
-    }
-
-    100% {
-        left: 50%;
-    }
-}
-
-@keyframes shift-left {
-    0% {
-        left: 50%;
-    }
-
-    100% {
-        left: 0;
-    }
-} */

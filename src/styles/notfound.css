@@ -1,0 +1,42 @@
+.notfound-contatiner {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--notfound-color);
+}
+
+.notfound-contatiner .toggler-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notfound-contatiner .toggler-container .ui-toggler {
+    box-shadow: 0 0 2rem 1rem var(--toggle-background);
+}
+
+.notfound-contatiner .toggler-container .ui-toggler .toggler {
+    background-color: var(--toggle-background);
+}
+
+.notfound-contatiner .error {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--onbackground-color);
+}
+
+.notfound-contatiner .message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--onbackground-color);
+}
+
+.notfound-contatiner .message span {
+    font-weight: 700;
+    color: var(--primary-color);
+}

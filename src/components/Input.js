@@ -12,14 +12,16 @@ const Input = (props) => {
 
   const [show, setShow] = useState(false);
   return (
-    <div className={`${props.className}-input-container input-container`}>
+    <div
+      className={`${props.className}-input-container input-container`}
+    >
       <label
         className={`${props.lift || props.value ? "lift" : ""} placeholder`}
       >
         {props.placeholder}
       </label>
       <input
-        className={`${props.lift || props.value ? "thicken" : ""} input`}
+        className="input"
         name={props.name}
         type={props.type === "password" && !show ? "password" : "text"}
         required={props.required}

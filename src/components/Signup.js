@@ -4,12 +4,13 @@ import "../styles/signup.css";
 import google from "../assets/icons/google.svg";
 //components
 import Input from "./Input";
+import UIToggler from "./UiToggler";
 //react
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Signup = (props) => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   const pattern = {
     email: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
@@ -44,11 +45,14 @@ const Signup = (props) => {
     setTimeout(() => {
       stop();
       turnRight();
-    }, 3000);
+    }, 2900);
   };
 
   return (
     <div className="signup-container">
+      <div className="toggler-container">
+        <UIToggler />
+      </div>
       <p className="lovebirds-title">Lovebirds</p>
       <p className="lovebirds-welcome">Welcome to Lovebirds</p>
       <form className="signup-form">
@@ -96,10 +100,11 @@ const Signup = (props) => {
         <div className="new-container">
           <p className="new-text">Already Lovebirds?</p>
           <button
-            className="create-btn"
+            className="signin-btn"
             onClick={(e) => {
               e.preventDefault();
               slide();
+              navigate("./signin", {replace: true});
             }}
           >
             Sign in

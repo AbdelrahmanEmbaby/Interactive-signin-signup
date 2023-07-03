@@ -3,15 +3,87 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: color 200ms linear, backgroundcolor 200ms linear;
 }
 
-:root {
+html {
     font-size: 16px;
+}
+
+.light-ui {
+    --blur: 2rem;
+    --background-image: url(../assets/images/background.jpg);
+    --background-color: #f8f8f8;
+    --onbackground-color: #4d4d4d;
+    --surface-color: #a4c4b5;
+    --onsurface-color: #fff;
+    --primary-color: #4a4a4a;
+    --onprimary-color: #ffffff;
+    --secondary-color: #a4c4b5;
+    --onsecondary-color: #fff;
+    --toggle-left: 50%;
+    --toggle-color: #a4c4b5;
+    --toggle-background: #cccccc;
+    --notfound-color: #a4c4b5;
+}
+
+.dark-ui {
+    --blur: 0.025rem;
+    --background-image: url(../assets/images/background-dark.jpg);
+    --background-color: #0f0f0f;
+    --onbackground-color: #dbdbdb;
+    --surface-color: #121212;
+    --onsurface-color: #fff;
+    --primary-color: #ffffff;
+    --onprimary-color: #ffffff;
+    --secondary-color: #e0835e;
+    --onsecondary-color: #fff;
+    --toggle-left: 7%;
+    --toggle-color: #3d3d3d;
+    --toggle-background: #262626;
+    --notfound-color: #121212;
 }
 
 .app-container {
     height: 100vh;
     background-size: cover;
-    background-image: url("../assets/images/ricardo-gomez-angel-RjBXz3rtdLw-unsplash.jpg");
+    background-image: var(--background-image);
     position: relative;
+}
+
+
+@media only screen and (max-width: 685px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 401px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 686px) and (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 896px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 897px) and (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
 }

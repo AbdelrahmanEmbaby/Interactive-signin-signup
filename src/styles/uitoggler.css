@@ -1,0 +1,34 @@
+.ui-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    width: 2.6rem;
+    height: 1.4rem;
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: inset 0 0 0.2rem 0.05rem var(--toggle-background);
+    cursor: pointer;
+}
+
+.ui-toggler .toggler {
+    background-color: var(--toggle-color);
+    width: 40%;
+    height: 70%;
+    border-radius: 50%;
+    position: absolute;
+    left: var(--toggle-left);
+    transition: all 200ms linear;
+}
+
+.ui-toggler i {
+    font-size: 0.75rem;
+}
+
+.ui-toggler .sun {
+    color: #f88056;
+}
+
+.ui-toggler .moon {
+    color: #e9e9e9;
+}

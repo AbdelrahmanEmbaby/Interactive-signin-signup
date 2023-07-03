@@ -8,16 +8,24 @@
     padding: 4rem;
 }
 
+.signup-container .toggler-container {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+
 .lovebirds-title {
     font-size: 2rem;
     font-weight: 700;
     font-family: 'Dancing Script', cursive;
-    color: var(--primary-color);
+    color: var(--onbackground-color);
 }
 
 .lovebirds-welcome {
+    text-align: center;
+    width: 12rem;
     font-size: 1rem;
-    color: var(--primary-color);
+    color: var(--onbackground-color);
 }
 
 .signup-form {
@@ -41,7 +49,7 @@
     height: 2rem;
     background-color: var(--secondary-color);
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--background-color);
     border: none;
     border-radius: 3rem;
@@ -76,51 +84,36 @@
     row-gap: 1rem;
 }
 
-.or-section {
-    width: min-content;
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    position: relative;
-}
-
-.or-section::after,
-.or-section::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 4rem;
-    height: 0.05rem;
-    background-color: var(--secondary-color);
-}
-
-.or-section::after {
-    right: 150%;
-}
-
-.or-section::before {
-    left: 150%;
-}
-
-.new-container {
+.signup-foot .new-container {
     display: flex;
     column-gap: 0.5rem;
 }
 
-.new-container .new-text {
+.signup-foot .new-container .new-text {
+    width: 8rem;
+    text-align: center;
     font-size: 0.85rem;
     color: var(--primary-color);
 }
 
-.new-container .create-btn {
+.signup-foot .new-container .signin-btn {
     background-color: transparent;
     border: none;
+    width: 3rem;
+    text-align: center;
     font-size: 0.85rem;
-    color: var(--surface-color);
+    color: var(--secondary-color);
     text-decoration: underline;
     cursor: pointer;
 }
 
-.new-container .create-btn:active {
+.new-container .signin-btn:active {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 685px) {
+    .signup-container .toggler-container {
+        top: 3% !important;
+        left: 82.5% !important;
+    }
 }

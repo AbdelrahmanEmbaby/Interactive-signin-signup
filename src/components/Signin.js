@@ -4,12 +4,13 @@ import "../styles/signin.css";
 import google from "../assets/icons/google.svg";
 //components
 import Input from "./Input";
+import UIToggler from "./UiToggler";
 //react
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Signin = (props) => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   const pattern = {
     email: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
@@ -33,20 +34,23 @@ const Signin = (props) => {
     }));
   };
 
-  const { turnLeft, walk, start, stop, started } = props.animation;
+  const { turnLeft, walk, start, stop, started, facingRight } = props.animation;
 
   const slide = () => {
     props.setFacingRight(true);
     if (!started) start();
     walk();
-    setTimeout(()=>{
+    setTimeout(() => {
       stop();
-      turnLeft()
-    },2900)
+      turnLeft();
+    }, 2900);
   };
 
   return (
     <div className="signin-container">
+      <div className="toggler-container">
+        <UIToggler />
+      </div>
       <p className="lovebirds-title">Lovebirds</p>
       <p className="lovebirds-welcome">Welcome to Lovebirds</p>
       <form className="signin-form">
@@ -80,7 +84,6 @@ const Signin = (props) => {
           className="forgot-btn"
           onClick={(e) => {
             e.preventDefault();
-            navigate("/forgotpassword");
           }}
         >
           Forgot password?
@@ -100,6 +103,7 @@ const Signin = (props) => {
             onClick={(e) => {
               e.preventDefault();
               slide();
+              navigate("/signup", {replace: true});
             }}
           >
             Create Account

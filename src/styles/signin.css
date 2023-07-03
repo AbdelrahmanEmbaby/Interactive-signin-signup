@@ -6,18 +6,27 @@
     flex-direction: column;
     row-gap: 2.8rem;
     padding: 4rem;
+    position: relative;
+}
+
+.signin-container .toggler-container {
+    position: absolute;
+    top: 3%;
+    left: 85%;
 }
 
 .lovebirds-title {
     font-size: 2rem;
     font-weight: 700;
     font-family: 'Dancing Script', cursive;
-    color: var(--primary-color);
+    color: var(--onbackground-color);
 }
 
 .lovebirds-welcome {
+    text-align: center;
+    width: 12rem;
     font-size: 1rem;
-    color: var(--primary-color);
+    color: var(--onbackground-color);
 }
 
 .signin-form {
@@ -41,7 +50,7 @@
     height: 2rem;
     background-color: var(--secondary-color);
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--background-color);
     border: none;
     border-radius: 3rem;
@@ -59,7 +68,7 @@
     background-color: transparent;
     border: none;
     text-decoration: underline;
-    color: var(--surface-color);
+    color: var(--secondary-color);
     font-size: 0.75rem;
     cursor: pointer;
 }
@@ -78,8 +87,9 @@
 
 .or-section {
     width: min-content;
-    color: var(--secondary-color);
+    color: var(--onbackground-color);
     font-size: 0.9rem;
+    font-weight: 600;
     position: relative;
 }
 
@@ -102,25 +112,42 @@
     left: 150%;
 }
 
+.google-btn {
+    width: 11rem;
+    font-size: 0.8rem;
+}
+
 .new-container {
     display: flex;
     column-gap: 0.5rem;
 }
 
-.new-container .new-text{
+.new-container .new-text {
+    width: 7rem;
+    text-align: center;
     font-size: 0.85rem;
     color: var(--primary-color);
 }
 
-.new-container .create-btn{
+.new-container .create-btn {
     background-color: transparent;
     border: none;
+    width: 7rem;
+    text-align: center;
     font-size: 0.85rem;
-    color: var(--surface-color);
+    color: var(--secondary-color);
     text-decoration: underline;
     cursor: pointer;
 }
 
-.new-container .create-btn:active{
+.new-container .create-btn:active {
     text-decoration: none;
+}
+
+
+@media only screen and (max-width: 685px) {
+    .signin-container .toggler-container {
+        top: 3% !important;
+        left: 82.5% !important;
+    }
 }
